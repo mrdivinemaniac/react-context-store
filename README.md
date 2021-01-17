@@ -1,6 +1,6 @@
-# @mrdivinemaniac/react-context-store
+# React Context Store
 
-This small library that demonstrates a way to use React's context API to create a global store using the familiar and convenient hooks API.
+This is a small library that demonstrates a way to use React's context API to create a global store using the familiar and convenient hooks API.
 
 ## Installation
 ```
