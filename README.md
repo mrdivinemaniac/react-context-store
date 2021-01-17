@@ -184,6 +184,21 @@ function Profile() {
 
 ## Additional Notes
 
+### Examples
+There are some examples inside the examples directory.
+
+#### The Todo Example
+This example demonstrates creation of multiple hook for the same store according to the use cases of the hooks.
+```
+yarn example:todo
+```
+OR
+```
+npm run example:todo
+```
+
+### Using The Context Directly
+
 The `createStore` method also returns a `Context` object along with `Provider` and `useStore`. You could also directly use `useContext(Context)` instead of `useStore` but that will take away some trivial error checking to see if the context has data in it.
 
 ### Example:
