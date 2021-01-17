@@ -1,0 +1,28 @@
+{
+  "name": "react-hooked-store",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "example:todo": "parcel ./examples/todo/index.html --out-dir ./example-build"
+  },
+  "author": "mrdivinemaniac",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "react": "17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
