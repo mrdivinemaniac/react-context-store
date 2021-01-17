@@ -1,10 +1,19 @@
-# react-hooked-state
+# @mrdivinemaniac/react-context-store
 
-This small library demonstrates a way to use React's context API to create a global store using the familiar and convenient hooks API.
+This small library that demonstrates a way to use React's context API to create a global store using the familiar and convenient hooks API.
+
+## Installation
+```
+yarn add @mrdivinemaniac/react-context-store
+```
+OR
+```
+npm install @mrdivinemaniac/react-context-store
+```
 
 ## Creating a Store
 
-Just import `createStore` from `react-hooked-state`.
+Just import `createStore` from `@mrdivinemaniac/react-context-store`.
 
 `createStore` takes the initial value of the store as an argument.
 
@@ -13,7 +22,7 @@ After that, you can use `useStore` returned from `createStore` to implement a cu
 ```javascript
 // store/user/index.js
 import { useCallback } from "react";
-import { createStore } from "react-hooked-state";
+import { createStore } from "@mrdivinemaniac/react-context-store";
 
 const initialState = {
   loading: false,
@@ -68,7 +77,9 @@ export function useUserStore() {
   };
 }
 ```
+
 ### Creating Multiple Hooks
+
 You can also create separate hooks for separate operations. The API is totally upto you!
 
 Below is an example of creating a separate hook for just the actions.
@@ -76,7 +87,7 @@ Below is an example of creating a separate hook for just the actions.
 ```javascript
 // store/user/index.js (alternate)
 import { useCallback } from "react";
-import { createStore } from "react-hooked-state";
+import { createStore } from "@mrdivinemaniac/react-context-store";
 
 const { Provider, useStore } = createStore({
   loading: false,
@@ -128,6 +139,7 @@ export function useUserActions() {
   return { resetUserData, setUser, loadUserData };
 }
 ```
+
 ### Important Information
 
 It is important to wrap the actions in `useCallback` in order to avoid unnecessary re-renders in child components.
@@ -141,7 +153,7 @@ After that, you can directly import and use the hooks that you created for your 
 If you have multiple stores and providers then you can use `combineProviders` in order to merge all the providers into one.
 
 ```jsx
-import { combineProviders } from "react-hooked-state";
+import { combineProviders } from "@mrdivinemaniac/react-context-store";
 import { UserStoreProvider } from "./store/user";
 import { SomeOtherStoreProvider } from "./store/some-other-store";
 import { Profile } from "./components/profile";
@@ -185,14 +197,19 @@ function Profile() {
 ## Additional Notes
 
 ### Examples
+
 There are some examples inside the examples directory.
 
 #### The Todo Example
+
 This example demonstrates creation of multiple hook for the same store according to the use cases of the hooks.
+
 ```
 yarn example:todo
 ```
+
 OR
+
 ```
 npm run example:todo
 ```
@@ -206,7 +223,7 @@ The `createStore` method also returns a `Context` object along with `Provider` a
 ```javascript
 // store/user/index.js
 import { useCallback, useContext } from "react";
-import { createStore } from "react-hooked-state";
+import { createStore } from "@mrdivinemaniac/react-context-store";
 
 const initialState = {
   loading: false,
