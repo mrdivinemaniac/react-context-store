@@ -1,5 +1,5 @@
 {
-  "name": "react-hooked-store",
+  "name": "@mrdivinemaniac/react-context-store",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
